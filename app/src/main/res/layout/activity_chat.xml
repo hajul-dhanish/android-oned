@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.oned.ChatActivity">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Eren Yeager"
+            android:textSize="20dp"
+            />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="20"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:textAlignment="textEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6"
+                    android:padding="16dp"
+                    android:text="Hello Eren" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/user_pacific" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:textAlignment="textEnd"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/user_pratikshya" />
+
+
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:textAlignment="textStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6"
+                    android:padding="16dp"
+                    android:text="hello" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout2"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:textAlignment="textEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6"
+                    android:padding="16dp"
+                    android:text="My Place at 20:00 ?" />
+
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/user_pacific" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout3"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/user_pratikshya" />
+
+
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:textAlignment="textStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6"
+                    android:text="Ok Done" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout4"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/changeTextid"
+                    android:textAlignment="textEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6"
+                    android:padding="16dp"
+                    android:text="My Place at 20:00 ?" />
+
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/user_pacific" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/type_message_area"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="bottom" />
+</LinearLayout>
+
