@@ -13,25 +13,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val bundle: Bundle = intent.extras!!
-        val useName = bundle.getString("userNamea")
 
-//        Toast.makeText(this, "HI $useName, Welcome Home :)", Toast.LENGTH_SHORT).show()
-
-        txvtest.text = "Hello $useName, Welcome to Android :)"
-
-
-        shareButtonid.setOnClickListener{
-            val sharableText: String = txvtest.text.toString()
-
-            val intent = Intent()
-            intent.action = Intent.ACTION_SEND
-            intent.putExtra(Intent.EXTRA_TEXT, sharableText)
-            intent.type = "text/plain"
-
-            startActivity(Intent.createChooser(intent, "Share to : "))
-
-        }
 
     }
 

@@ -12,12 +12,16 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
+
+        //<To Hide Action Bar
         val actionBar: ActionBar? = supportActionBar
         actionBar?.hide()
 
-        setContentView(R.layout.activity_main)
 
+
+//  When CLicked "Create Account" Button
         createAccid.setOnClickListener {
             val userName: String = mainUserName.text.toString()
             val emailAdd: String = emailid.text.toString()
@@ -38,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+//  When Clicked "Sarable Username" Button
             skipToMainPageid.setOnClickListener {
                 val userName: String = mainUserName.text.toString()
                 val emailAdd: String = emailid.text.toString()
@@ -63,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                         ).show()
                     }
                     userName.isNotEmpty() and emailAdd.isNotEmpty() and passWord.isNotEmpty() -> {
-                        val intent = Intent(this, HomeActivity::class.java)
+                        val intent = Intent(this, TestAction::class.java)
 
                         intent.putExtra("userNamea",userName)
 
@@ -71,6 +76,16 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+
+//  When Clicked "Skip to HomePage" Button
+        kernalMainPageid.setOnClickListener {
+            val userName: String = mainUserName.text.toString()
+            val emailAdd: String = emailid.text.toString()
+            val passWord: String = passid.text.toString()
+
+            val radioCkAns = radioGrp.checkedRadioButtonId
+            val radioButton = findViewById<RadioButton>(radioCkAns)
+        }
 
     }
 }
