@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
                     userName.isNotEmpty() and emailAdd.isNotEmpty() and passWord.isNotEmpty() -> {
                         val intent = Intent(this, HomeActivity::class.java)
 
-                        intent.putExtra("UserInputname",userName)
+                        intent.putExtra("userNamea",userName)
 
                         startActivity(intent)
                     }
