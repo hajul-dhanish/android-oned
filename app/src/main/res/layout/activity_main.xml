@@ -22,9 +22,7 @@
             android:contentDescription="LOGO"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            app:srcCompat="@drawable/waifu1"
-            tools:ignore="ImageContrastCheck" />
-
+            app:srcCompat="@drawable/waifu1" />
 
         <TextView
             android:id="@+id/textView"
@@ -78,9 +76,7 @@
                         android:id="@+id/fid"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Female"
-
-                        />
+                        android:text="Female" />
 
                 </RadioGroup>
 
@@ -118,18 +114,19 @@
 
             <Button
                 android:id="@+id/createAccid"
-                android:layout_width="135dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
                 android:layout_height="77dp"
                 android:layout_marginEnd="20dp"
                 android:text="Create Account" />
 
             <Button
                 android:id="@+id/skipToMainPageid"
-                android:layout_width="match_parent"
+                style="?android:attr/buttonBarPositiveButtonStyle"
+                android:layout_width="wrap_content"
                 android:layout_height="77dp"
                 android:layout_marginEnd="20dp"
                 android:text="Login Anonymous" />
-
 
         </LinearLayout>
 
