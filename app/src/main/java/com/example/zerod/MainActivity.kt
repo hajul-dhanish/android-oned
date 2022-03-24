@@ -39,19 +39,36 @@ class MainActivity : AppCompatActivity() {
         }
 
             skipToMainPageid.setOnClickListener {
+                val userName: String = mainUserName.text.toString()
+                val emailAdd: String = emailid.text.toString()
+                val passWord: String = passid.text.toString()
 
                 val radioCkAns = radioGrp.checkedRadioButtonId
                 val radioButton = findViewById<RadioButton>(radioCkAns)
 
-                if(radioButton == mid){
-                    Toast.makeText(
-                        this@MainActivity,
-                        "No Man allowed \uD83D\uDE20 , At this Point We only allow women",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                } else{
-                    val intent = Intent(this, HomeActivity::class.java)
-                    startActivity(intent)
+                when {
+                    radioButton == mid -> {
+                        Toast.makeText(
+                            this@MainActivity,
+                            "No Man allowed \uD83D\uDE20 , At this Point We only allow women",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                    }
+                    userName.isEmpty() and emailAdd.isEmpty() and passWord.isEmpty() -> {
+                        Toast.makeText(
+                            this@MainActivity,
+                            "Please Fill the form buddy :/",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    userName.isNotEmpty() and emailAdd.isNotEmpty() and passWord.isNotEmpty() -> {
+                        val intent = Intent(this, HomeActivity::class.java)
+
+                        intent.putExtra("UserInputname",userName)
+
+                        startActivity(intent)
+                    }
                 }
             }
 
