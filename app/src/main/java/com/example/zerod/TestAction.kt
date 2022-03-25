@@ -19,11 +19,10 @@ class TestAction : AppCompatActivity() {
 //        Toast.makeText(this, "HI $useName, Welcome Home :)", Toast.LENGTH_SHORT).show()
         txvtest.text = "Hello $useName, Welcome to Android :)"
 
+//  initialization of value
         usernameHolderid.text = useName
         emailHolderid.text = emailName
         genderHolderid.text = genderName
-
-
 
 // When "Sharable Username" Button clicked
         shareButtonid.setOnClickListener{

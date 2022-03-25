@@ -2,10 +2,12 @@ package com.example.zerod
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -60,6 +62,12 @@ class MainActivity : AppCompatActivity() {
                         ).show()
                     }
                     userName.isEmpty() and emailAdd.isEmpty() and passWord.isEmpty() -> {
+
+                        requiredSyntextForm_username.isVisible = true
+                        requiredSyntextForm_email.isVisible = true
+                        requiredSyntextForm_pass.isVisible = true
+                        requiredSyntextForm_gender.isVisible = true
+
                         Toast.makeText(
                             this@MainActivity,
                             "Please Fill the form buddy :/",
