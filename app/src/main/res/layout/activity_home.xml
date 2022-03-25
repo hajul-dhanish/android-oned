@@ -8,27 +8,10 @@
     android:textAlignment="center"
     tools:context=".HomeActivity">
 
-    <Space
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="40dp"/>
+        android:layout_height="match_parent" />
 
-    <TextView
-        android:id="@+id/txvtest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:text="Why are you gay?"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="40dp"/>
-
-    <Button
-        android:id="@+id/shareButtonid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Share with social media" />
 
 </LinearLayout>

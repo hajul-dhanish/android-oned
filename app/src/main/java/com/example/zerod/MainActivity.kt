@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             if (userName.isNotEmpty() and emailAdd.isNotEmpty() and passWord.isNotEmpty()){
                 Toast.makeText(
                     this@MainActivity,
-                    "Hi, $userName, Will Update in Upcoming Version...",
+                    "Hi, $userName, Will Update in Upcoming Version..., For now, Just Skip to home",
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-//  When Clicked "Sarable Username" Button
+//  When Clicked "Sharable Username" Button
             skipToMainPageid.setOnClickListener {
                 val userName: String = mainUserName.text.toString()
                 val emailAdd: String = emailid.text.toString()
@@ -58,7 +58,6 @@ class MainActivity : AppCompatActivity() {
                             "No Man allowed \uD83D\uDE20 , At this Point We only allow women",
                             Toast.LENGTH_SHORT
                         ).show()
-
                     }
                     userName.isEmpty() and emailAdd.isEmpty() and passWord.isEmpty() -> {
                         Toast.makeText(
@@ -69,9 +68,9 @@ class MainActivity : AppCompatActivity() {
                     }
                     userName.isNotEmpty() and emailAdd.isNotEmpty() and passWord.isNotEmpty() -> {
                         val intent = Intent(this, TestAction::class.java)
-
-                        intent.putExtra("userNamea",userName)
-
+                        intent.putExtra("userNameShared", userName)
+                        intent.putExtra("emailNameShared", emailAdd)
+                        intent.putExtra("genderNameShared", radioCkAns)
                         startActivity(intent)
                     }
                 }
@@ -85,6 +84,9 @@ class MainActivity : AppCompatActivity() {
 
             val radioCkAns = radioGrp.checkedRadioButtonId
             val radioButton = findViewById<RadioButton>(radioCkAns)
+
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
 
     }
