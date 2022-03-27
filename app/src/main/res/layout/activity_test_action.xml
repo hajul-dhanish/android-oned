@@ -23,18 +23,20 @@
             android:textAlignment="center"
             android:text="Error 404, Not found"/>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+<!--        <Space-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"/>-->
 
-        <!-- Media -->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="194dp"
-            android:src="@drawable/ic_launcher_foreground"
-            android:scaleType="centerCrop"/>
+<!--         Media -->
+<!--        <ImageView-->
+<!--            android:id="@+id/displyaPictureid"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="194dp"-->
+<!--            android:src="@drawable/ic_launcher_foreground"-->
+<!--            android:scaleType="centerCrop"/>-->
 
         <LinearLayout
+            android:id="@+id/completeCardid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -45,7 +47,7 @@
                 android:id="@+id/usernameHolderid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="username"
+                android:text="unhandled Error"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 />
             <TextView
@@ -53,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="emailid"
+                android:text="unhandled Error"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorSecondary"
                 />
@@ -62,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="gender"
+                android:text="unhandled Error"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorSecondary"
                 />
@@ -75,18 +77,25 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:orientation="horizontal">
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/DeleteAccountid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="Delete" />
 
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/shareButtonid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_share_24"
                 android:text="Share" />
+
+            <ImageButton
+                android:id="@+id/DeleteAccountid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:soundEffectsEnabled="true"
+                android:clickable="true"
+                android:padding="10dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_baseline_delete_24"
+                app:tint="@color/red" />
 
         </LinearLayout>
 
@@ -100,6 +109,7 @@
         android:id="@+id/verifyAccountid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:text="Validate Account" />
 
 </LinearLayout>

@@ -2,7 +2,6 @@ package com.example.zerod
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
@@ -36,6 +35,11 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
+                requiredSyntextForm_username.isVisible = true
+                requiredSyntextForm_email.isVisible = true
+                requiredSyntextForm_pass.isVisible = true
+                requiredSyntextForm_gender.isVisible = true
+
                 Toast.makeText(
                     this@MainActivity,
                     "Please Fill the form buddy :/",
@@ -68,11 +72,11 @@ class MainActivity : AppCompatActivity() {
                         requiredSyntextForm_pass.isVisible = true
                         requiredSyntextForm_gender.isVisible = true
 
-                        Toast.makeText(
-                            this@MainActivity,
-                            "Please Fill the form buddy :/",
-                            Toast.LENGTH_SHORT
-                        ).show()
+//                        Toast.makeText(
+//                            this@MainActivity,
+//                            "Please Fill the form buddy :/",
+//                            Toast.LENGTH_SHORT
+//                        ).show()
                     }
                     userName.isNotEmpty() and emailAdd.isNotEmpty() and passWord.isNotEmpty() -> {
                         val intent = Intent(this, TestAction::class.java)
@@ -93,8 +97,17 @@ class MainActivity : AppCompatActivity() {
             val radioCkAns = radioGrp.checkedRadioButtonId
             val radioButton = findViewById<RadioButton>(radioCkAns)
 
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            if(userName.isNotEmpty() and emailAdd.isNotEmpty() and passWord.isNotEmpty()){
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+            } else {
+                requiredSyntextForm_username.isVisible = true
+                requiredSyntextForm_email.isVisible = true
+                requiredSyntextForm_pass.isVisible = true
+                requiredSyntextForm_gender.isVisible = true
+            }
+
+
         }
 
     }
