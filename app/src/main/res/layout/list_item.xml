@@ -19,7 +19,7 @@
         android:padding="5dp" >
 
         <TextView
-            android:id="@+id/txvTitle"
+            android:id="@+id/tv_login"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -27,13 +27,6 @@
             android:text="Title"
             android:textSize="18sp" />
 
-        <ImageView
-            android:id="@+id/imgShare"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:src="@android:drawable/ic_menu_share"
-            card_view:tint="@color/white" />
 
     </LinearLayout>
 
