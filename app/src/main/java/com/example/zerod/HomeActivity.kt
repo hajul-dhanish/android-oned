@@ -1,10 +1,12 @@
 package com.example.zerod
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_home.*
+
 
 class HomeActivity : AppCompatActivity() {
 
@@ -13,6 +15,7 @@ class HomeActivity : AppCompatActivity() {
     var listOfusers: ArrayList<Users> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE or WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
@@ -37,10 +40,10 @@ class HomeActivity : AppCompatActivity() {
         mRecyclerView = findViewById(R.id.my_recycler_view)
 
             val mLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-            mRecyclerView!!.layoutManager = mLayoutManager
+            mRecyclerView?.layoutManager = mLayoutManager
 
             mAdapter = Myadapter(listOfusers)
-            mRecyclerView!!.adapter = mAdapter
+            mRecyclerView?.adapter = mAdapter
 
         }
 
