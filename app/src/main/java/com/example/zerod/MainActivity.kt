@@ -94,8 +94,8 @@ class MainActivity : AppCompatActivity() {
             val emailAdd: String = emailid.text.toString()
             val passWord: String = passid.text.toString()
 
-            val radioCkAns = radioGrp.checkedRadioButtonId
-            val radioButton = findViewById<RadioButton>(radioCkAns)
+//            val radioCkAns = radioGrp.checkedRadioButtonId
+//            val radioButton = findViewById<RadioButton>(radioCkAns)
 
             if(userName.isNotEmpty() and emailAdd.isNotEmpty() and passWord.isNotEmpty()){
                 val intent = Intent(this, HomeActivity::class.java)

@@ -39,6 +39,7 @@ class TestAction : AppCompatActivity() {
         DeleteAccountid.setOnClickListener{
             usernameHolderid.text = null
             emailHolderid.text = null
+            txvtest.text = null
         }
 
 //  when Click "Validate Account"

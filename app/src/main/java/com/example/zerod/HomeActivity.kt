@@ -1,51 +1,63 @@
 package com.example.zerod
 
 import android.os.Bundle
-import android.util.Log
-import android.view.WindowManager
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_home.*
-import kotlin.math.log
-
+import kotlinx.android.synthetic.main.activity_main.*
 
 class HomeActivity : AppCompatActivity() {
 
     private var mRecyclerView: RecyclerView? = null
     private var mAdapter: RecyclerView.Adapter<*>? = null
-    var listOfusers: ArrayList<Users> = ArrayList()
+    private var listOfusers: ArrayList<Users> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE or WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
 
-        //adding items in list
+        // finding the button
+        val addNewButton = findViewById<Button>(R.id.addTaskButtonid)
+        val deleteTaskButton = findViewById<ImageButton>(R.id.deleteTaskButtonid)
 
-        val newTask:String =  addNewTaskid.text.toString()
+        // finding the edit text
+        val newTask = findViewById<EditText>(R.id.addNewTaskid)
 
+//        val newTask:String =  addNewTaskid.text.toString( // <Error intha line la blah blah blah >
+//
+//        // adding items in list
 //        for (i in 0..1) {
 //            val user = Users()
 //            user.login = "Test $i"
 //            listOfusers.add(user)
 //        }
 
-        addTaskButtonid.setOnClickListener {
 
-//            Log.d("Test 1", "Value is : $newTask" )
 
-            if(newTask.isNotEmpty()){
-                val newUser = Users()
-                newUser.login = newTask
+        addNewButton.setOnClickListener {
+
+            val addNewText = newTask.text.toString()
+            val newUser = Users()
+            newUser.login = addNewText
+
+            if(addNewText.isNotEmpty()){
                 listOfusers.add(newUser)
             } else {
                 Toast.makeText(this, "Value Can't be Null!" , Toast.LENGTH_SHORT).show()
             }
+
         }
 
+        deleteTaskButton.setOnClickListener{
+            listOfusers.removeAll(listOf(Users()))
+        }
+
+        // find recycle view
         mRecyclerView = findViewById(R.id.my_recycler_view)
 
             val mLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
@@ -57,4 +69,5 @@ class HomeActivity : AppCompatActivity() {
         }
 
     }
+
 

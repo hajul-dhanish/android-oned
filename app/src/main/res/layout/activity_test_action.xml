@@ -23,18 +23,6 @@
             android:textAlignment="center"
             android:text="Error 404, Not found"/>
 
-<!--        <Space-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="40dp"/>-->
-
-<!--         Media -->
-<!--        <ImageView-->
-<!--            android:id="@+id/displyaPictureid"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="194dp"-->
-<!--            android:src="@drawable/ic_launcher_foreground"-->
-<!--            android:scaleType="centerCrop"/>-->
-
         <LinearLayout
             android:id="@+id/completeCardid"
             android:layout_width="match_parent"
