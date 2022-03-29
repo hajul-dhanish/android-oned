@@ -1,11 +1,14 @@
 package com.example.zerod
 
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlin.math.log
 
 
 class HomeActivity : AppCompatActivity() {
@@ -20,21 +23,27 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
 
-
         //adding items in list
 
-        val NewTasktext:String =  addNewTaskid.text.toString()
+        val newTask:String =  addNewTaskid.text.toString()
 
-        for (i in 0..1) {
-            val user = Users()
-            user.login = "Test $i"
-            listOfusers.add(user)
-        }
+//        for (i in 0..1) {
+//            val user = Users()
+//            user.login = "Test $i"
+//            listOfusers.add(user)
+//        }
 
         addTaskButtonid.setOnClickListener {
-            val newuser = Users()
-            newuser.login = NewTasktext
-            listOfusers.add(newuser)
+
+//            Log.d("Test 1", "Value is : $newTask" )
+
+            if(newTask.isNotEmpty()){
+                val newUser = Users()
+                newUser.login = newTask
+                listOfusers.add(newUser)
+            } else {
+                Toast.makeText(this, "Value Can't be Null!" , Toast.LENGTH_SHORT).show()
+            }
         }
 
         mRecyclerView = findViewById(R.id.my_recycler_view)
