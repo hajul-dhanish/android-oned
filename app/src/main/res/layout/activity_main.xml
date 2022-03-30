@@ -107,10 +107,7 @@
                         android:text="Female" />
 
                 </RadioGroup>
-
-
             </LinearLayout>
-
 
         </LinearLayout>
 
@@ -154,7 +151,6 @@
             android:visibility="gone"
             />
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -197,9 +193,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Release version-0.2B.1" />
-
-
+            android:text="Release version-0.2B.2" />
 
     </LinearLayout>
 
