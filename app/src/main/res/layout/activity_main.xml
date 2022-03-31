@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="New User Register Form"
+            android:text="Create Account"
             android:textAllCaps="true"
             android:textColor="@color/MaterialMe" />
 
